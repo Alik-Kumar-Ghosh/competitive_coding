@@ -4,9 +4,6 @@ int maxRepeating(string str)
 { 
     int len = str.length(); 
     int count = 0; 
-  
-    // Find the maximum repeating character 
-    // starting from str[i] 
     char res = str[0]; 
     for (int i=0; i<len; i++) 
     { 
@@ -17,8 +14,6 @@ int maxRepeating(string str)
                 break; 
             cur_count++; 
         } 
-  
-        // Update result if required 
         if (cur_count > count) 
         { 
             count = cur_count; 
