@@ -16,8 +16,7 @@ void find(string str1, string str2)
     for (int i=0; i<l2; i++) 
     { 
     
-        if (present[str2[i] - 'a'] == 1 
-            || present[str2[i] - 'a'] == -1) 
+        if (present[str2[i] - 'a'] == 1 || present[str2[i] - 'a'] == -1) 
             present[str2[i] - 'a'] = -1; 
   
         else
