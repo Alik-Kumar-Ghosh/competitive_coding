@@ -5,4 +5,8 @@ My solutions of competitive_coding problem (codechef , codeforces , hackerrank ,
 Currently :star: :star: :star:  in codechef : 
 <alt href="https://www.codechef.com/users/alik_ghosh">https://www.codechef.com/users/alik_ghosh</a>
 
+```
+
 >All solutions are verified.
+
+```
