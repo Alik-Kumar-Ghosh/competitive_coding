@@ -1,5 +1,6 @@
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class _6_union_of_2_array {
@@ -15,23 +16,39 @@ public class _6_union_of_2_array {
         for (int i = 0; i < m; i++) {
             b[i] = s.nextInt();
         }
-        int count=0;
-        int arr[]=new int [n+m];
-        for (int i = 0; i <n ; i++) {
-            arr[i]=a[i];
-        }
-        for (int i = n,j=0; i < n+m; i++,j++) {
-            arr[i]=b[j];
-        }
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i+1; j < arr.length; j++) {
-                if(arr[i]>arr[j])
-                    count++;
-                else if (arr[i]<arr[j])
-                    count++;
+      int arr[]=new int[n+m];
+        int i=0;
+        int j=0;
+        int k=0;
+        while (i<n&&j<m){
+            if(a[i]<=b[j]){
+                arr[k]=a[i];
+                k++;
+                i++;
             }
-
+            else {
+                arr[k]=b[j];
+                k++;
+                j++;
+            }
         }
-        System.out.println(count);
+        while (i<n){
+            arr[k]=a[i];
+            k++;
+            i++;
+        }
+        while (j<m){
+            arr[k]=b[j];
+            k++;
+            j++;
+        }
+       System.out.println(Arrays.toString(arr));
+        HashSet <Integer> unoin = new HashSet<>(n+m);
+        for (int index:
+             arr) {
+            unoin.add(index);
+        }
+        System.out.println(unoin);
+        System.out.println(unoin.size());
     }
 }
